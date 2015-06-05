@@ -1,0 +1,202 @@
+@charset "UTF-8";
+*
+{
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+ul,li
+{
+    list-style-type:none;
+}
+img
+{
+    -ms-interpolation-mode:bicubic;
+}
+html
+{
+    overflow-x:hidden;
+}
+body
+{
+    font-family: 'Roboto', sans-serif;
+    overflow-x:hidden;
+}
+a
+{
+    color:#000;
+    text-decoration:none;
+    cursor: pointer;
+}
+a:hover
+{
+    text-decoration: underline;
+}
+#header-container 
+{
+    opacity: 0;
+    width: 100%;
+    height: 75px;
+    position: fixed;
+    top:0;
+    left:0;
+    background: rgb(255,255,255);
+    z-index: 50;
+}
+.logo
+{
+    height: 80px;
+    width: 34%;
+    background-color: #1D2022;
+    position: absolute;
+}
+.logo img
+{
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+}
+.logo a,
+.logo.active a
+{
+    color: #1D2022;
+}
+.openSourceButton
+{
+    color: #000;
+    height: 80px;
+    background-color: rgb(120,230,255);
+    left: 34%;
+    position: absolute;
+}
+.techRadarButton
+{
+    position: absolute;
+    display:inline-block;
+    color: #000;
+    height: 80px;
+    left: 50.5%;
+    background-color: rgb(245,177,69);
+}
+.hackNightButton
+{
+    display:inline-block;
+    position: absolute;
+    color: #000;
+    height: 80px;
+    left: 67%;
+    background: rgb(91,40,125);
+}
+.loginForm
+{
+    height: 80px;
+    display:inline-block;
+    position: absolute;
+    margin-bottom: 20px;
+    left: 83.5%;
+    font-size: 18px;
+}
+#openSourceNavBar
+{
+    position: absolute;
+    height: 10px;
+    width: 100%;
+    background-color: rgb(120,230,255);
+    top: 80px;
+}
+#techRadarNavBar
+{
+    position: absolute;
+    height: 10px;
+    width: 100%;
+    background-color: rgb(245,177,69);
+    top: 80px;
+}
+#hackNightNavBar
+{
+    position: absolute;
+    height: 10px;
+    width: 100%;
+    background: rgb(91,40,125);
+    top: 80px;
+}
+#logoNavBar
+{
+    position: absolute;
+    height: 10px;
+    width: 100%;
+    background-color: #1D2022;
+    top: 80px;
+}
+#openSourceBar
+{
+    position: absolute;
+    height: 10px;
+    width: 200%;
+    background-color: rgb(120,230,255);
+    top: 0px;
+    left: -50%;
+}
+#techRadarBar
+{
+    position: absolute;
+    height: 10px;
+    width: 200%;
+    background-color: rgb(245,177,69);
+    top: 0px; 
+    left: -50%;
+}
+#hackNightBar
+{
+    position: absolute;
+    height: 10px;
+    width: 200%;
+    background: rgb(91,40,125);    
+    top: 0px;
+    left: -50%;
+}
+#menu li a,
+#menu li.active a
+{
+    line-height: 75px;
+    display:block;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(255,255,255);
+    font-size: 20px;
+}
+#menu li
+{
+    list-style: none;
+    float: left;
+    text-align: center;
+    width: 16.6667%; /* fallback for non-calc() browsers */
+    width: calc(100% / 6);
+}
+#menu
+{
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 40px;
+    width: 100%;
+    z-index: 3;
+    padding: 0;
+    margin:0;
+}
+.intro
+{
+    text-align: center;
+    max-width: 100%;
+}
+
+#f1 {
+    background-color: #ccc;
+    border-style: solid;
+    border-width: 1px;
+    height: 80px;
+}
+.f1_label {
+    white-space: nowrap;
+}

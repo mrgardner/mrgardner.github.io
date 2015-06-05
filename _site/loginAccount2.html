@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html id="exp" lang="en">
+<head>
+    <title>Kenzan Media</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="css/kenzanHackNight.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <link href='css/galleriffic.css' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/kenzanNavBarScript.js"> </script>
+    <script src="js/headerScript.js"></script>
+    <script type="text/javascript" src="js/jcarousel.min.js"></script>
+    <script type="text/javascript" src="js/jcarousel.basic.js"></script>
+    <script type="text/javascript" src="js/jcarousel.techRadar.js"></script>
+    <script type="text/javascript" src="js/jcarousel.hackNightMobile.js"></script>
+    <script type="text/javascript" src="js/jcarousel.hackNightGallery.js"></script>
+    <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/gallery-modal.js"></script>
+    <script type="text/javascript" src="js/galleriffic.js"></script>
+    <script type="text/javascript" src="js/opacityrollover.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>    
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div id="header-container">
+          <ul id="menu">  
+              <a href="#intro" id='introSection'>
+                <div class="logo">
+                    <img src="imgs/kenzan.png"/>
+                </div>
+              </a>
+              <li class="gitButton">
+                  <a href="#git" id='gitSection'>Open Source</a>  
+              </li>
+              <li class="techRadarButton">
+                  <a href="#techRadar" id='techRadarSection'>Tech Radar</a>
+              </li>
+              <li class="hackNightButton">
+                  <a href="#hackNight" id='hackNightSection'>Hack Night</a>
+              </li>
+              <li class="login_form">
+               <li class="login_form">
+                <form name="f1" id="f1" onsubmit="$('form').get(0).setAttribute('action', 'index.html');">
+              <table>
+                  <tr>
+                      <td class="f1_label">Logged in as: testAccount2</td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <input type="submit" style="font-size:18px; " />
+                      </td>
+                  </tr>
+              </table>
+          </form>
+              </li>
+              <div class="mobileHide">
+                <div id="logoNavBar"></div>
+                <div id="gitNavBar"></div>
+                <div id="techRadarNavBar"></div>
+                <div id="hackNightNavBar"></div>
+              </div>
+          </ul>
+      </div>
+  </div>
+</div>
+
+           
+
+        <div id="intro" class="section intro">
+        <div class="heading">
+          <img class="intro-logo" src="imgs/kenzan-logo.png"/>
+        </div>
+        <div class="container">
+            <div class="row">
+            <div class="content">
+                <h3>Making Next Possible</h3>
+                
+                <div>
+                    <p>Developers analyzed structured JSON using Spark and worked on a LISP compiler during April's <a href="">Kenzan Hack Night</a>.
+                </p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="git" class="section git"> 
+        <div class="heading">
+          
+            <h2><span><a href="http://github.com/kenzanmedia">Open Source</a></span></h2>
+        </div>
+        <div class="container">
+            <div class="row">
+            <div class="content" id="gitContent">
+                <div id="gitBar"></div>
+      
+                <div class="jcarousel-wrapper3">
+                        <div class="jcarousel3">
+                            <ul>
+                                <li><a href="https://github.com/"><img id="bowtie" src="imgs/OpenSource/github.png"></a></li>
+                                <li><a href="https://github.com/kenzanmedia/knzn-lib"><img id="knzn-lib" src="imgs/OpenSource/knzn-lib.png"></a></li>
+                                <li><a href="https://github.com/Netflix/zeno"><img id="zeno" src="imgs/OpenSource/zeno.png"></a></li>
+                                <li><a href="https://github.com/Netflix"><img id="netflixOss" src="imgs/OpenSource/netflixoss.jpeg"></a></li>
+                            </ul>
+                        </div>
+
+                        <a href="#" class="jcarousel-control-prev3">&lsaquo;</a>
+                        <a href="#" class="jcarousel-control-next3">&rsaquo;</a>
+                        
+                        <p class="jcarousel-pagination3">
+                            
+                        </p>
+                    </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="techRadar" class="section techRadar">
+        <div class="heading">
+            <h2><span>What is on the<br class="w1024 w640">Tech Radar?</span></h2>
+        </div>
+        <div class="content" id="techRadarContent">
+          <div id="techRadarBar"></div>
+          <h3>On the Tech Radar</h3>
+
+              <div class="jcarousel-wrapper2">
+                        <div class="jcarousel2">
+                            <ul id="row">
+                                <li>
+                                  <h1>JSPM</h1>
+                      <img id="images" src="imgs/techRadar/jspm.png" width="250" height="350"/><br class="w1024 w640">
+                      <div id="techRadarDesc">Jspm is a JavaScript package manager </div>
+                        <div id="techRadarDesc">Works with SystemJS universal module loader </div>
+                        <div id="techRadarDesc">Built on top of ES6 module loader</div>
+                      </li>
+                                <li>
+                                  <h1>CSSNext (CSS 4 polfills plugins pack)</h1>
+                                  <img id="images" src="imgs/techRadar/css-next.png" width="250" height="350"/><br class="w1024 w640">
+                        <div id="techRadarDesc">Converts your code in CSS4+ to CSS3</div>
+                        <div id="techRadarDesc">Transforms your CSS specs that are not implemented in the more popular browsers into more compatiable CSS</div>
+                      </li>
+                      <li>
+                      <h1>PostCSS</h1>
+                      <img id="images" src="imgs/techRadar/postcss.png" width="200" height="200"/><br class="w1024 w640">
+                        <div id="techRadarDesc">Transforms CSS with JS plugins</div>
+                        <div id="techRadarDesc">The tools is very small and only includes a CSS parser, a CSS node tree API, a source map generator, and a node tree stringifier</div>
+                                </li>
+                                <li>
+                                  <h1>Web Workers</h1>
+                                  <img id="images" src="imgs/techRadar/web-workers.png" width="250" height="350"/><br class="w1024 w640">
+                        <div id="techRadarDesc">Run a JavaScript process in the background and not affect the performance of the page</div>
+                                </li>
+                                <li>
+                                  <h1>Service Workers</h1>
+                                  <img id="images" src="imgs/techRadar/service-worker.png" width="250" height="350"/><br class="w1024 w640">
+                        <div id="techRadarDesc" style="font-size: 10px;">Event driven worker that is registered to an origin and a path</div>
+                        <div id="techRadarDesc">Is a JavaScript file that can control the web page/ website by intercepting network requests and the creation of effective offline experiencess</div>
+                                </li>
+                                <li>
+                                  <h1>Web-components</h1>
+                                  <img id="images" src="imgs/techRadar/web-components.png" width="250" height="350"/><br class="w1024 w640">
+                        <div id="techRadarDesc">Set of standards created by Google engineers that allow the creation of reusable widgets or components in web documents or web applications</div>
+                                </li>
+                                <li>
+                      <h1>Polymer</h1>
+                      <img id="images" src="imgs/techRadar/polymer.png" width="200" height="200"/>
+                        <div id="techRadarDesc">Built on top of Web-Components</div>
+                        <div id="techRadarDesc">A new library that makes it fatter and easier to create web applications</div>
+                        <div id="techRadarDesc">Hasn't been released yet and is currently in Developer preview</div>
+                                </li>
+                                <li>
+                                  <h1>ES6</h1>
+                                  <img id="images" src="imgs/techRadar/es6.png" width="200" height="300"/><br class="w1024 w640">
+                        <div id="techRadarDesc">The upcoming sixth mahor release of the ECMAScript language specification</div>
+                        <div id="techRadarDesc">Hopefully will be approved in June 2015</div>
+                        <div id="techRadarDesc">Some new features include: modules and classes, block scoping, parameters and spread and more</div>
+                                </li>
+                                <li>
+                      <h1>Webpack</h1>
+                      <img id="images" src="imgs/techRadar/webpack.jpeg" width="150" height="250"/>
+                        <div id="techRadarDesc">Bundesles JavaScript files for use in a browser</div>
+                        <div id="techRadarDesc">Can bundle CommonJS and AMD</div>
+                        <div id="techRadarDesc">Highly modular plugin system</div>
+                        <div id="techRadarDesc">Capable if transforming, bundling, or packaging almost any resource or asset</div>
+                                </li>
+                                <li>
+                                  <h1>ReactJS</h1>
+                                  <img id="images" src="imgs/techRadar/reactjs.jpg" width="250" height="350"/><br class="w1024 w640">
+                        <div id="techRadarDesc" style="font-size: 40px;">UI library that was developed by Facebook to help the creation of interactive, and reusable UI components</div>
+                                </li>
+                                <li>
+                                  <h1>AngularJS 2</h1>
+                                  <img id="images" src="imgs/techRadar/angularjs.jpg" width="250" height="350"/><br class="w1024 w640">
+                        <div id="techRadarDesc">A reworked version of angularJS</div>
+                                </li>
+                                <li>
+                                  <h1>TypeScript</h1>
+                                  <img id="images" src="imgs/techRadar/typescript.jpg" width="250" height="350"/><br class="w1024 w640">
+                        <div id="techRadarDesc" style="font-size: 10px;">A typed sybset of JavaScript that complies to plain javaScript</div>
+                                </li>
+                                <li>
+                                  <h1>http2</h1>
+                                  <img id="images" src="imgs/techRadar/http2.png" width="250" height="350"/><br class="w1024 w640">
+                        <div id="techRadarDesc">Second major version for HTTP network protocol that is used by world wide web</div>
+                        <div id="techRadarDesc" style="font-size: 10px;">Based on Google's SPDY</div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <a href="#" class="jcarousel-control-prev2" style="width: 10px; height: 10px;">&lsaquo;</a>
+                        <a href="#" class="jcarousel-control-next2" style="width: 10px; height: 10px;">&rsaquo;</a>
+                        
+                        <p class="jcarousel-pagination2" style="height: 50px; width: 30px;">
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+      <div id="hackNight" class="section hackNight">
+          <div class="heading">
+            <h2><span><a href="http://www.meetup.com/Kenzan-Media-Pawtucket-Hack-Nights/"> <img id="meetupLogo" src="imgs/meetup-logo.png"/></a></span></h2>
+        </div>
+        <div class="content" id="hackNightContent">
+          <div id="hackNightBar"></div>
+
+            <h3><a href="http://www.meetup.com/Kenzan-Media-Pawtucket-Hack-Nights/">Join us at Hack Night!</a></h3>
+
+                <div class="mobileShow">
+                  <script type="text/javascript" src="js/galleriffic.gallery.js"></script>
+                  <div class="jcarousel-wrapper">
+                          <div class="jcarousel">
+                              <ul>
+                                  <li><img src="imgs/hacknight-album/hack-night-2.jpeg" width="600" height="400" alt=""></li>
+                                  <li><img src="imgs/hacknight-album/hack-night-3.jpeg" width="600" height="400" alt=""></li>
+                                  <li><img src="imgs/hacknight-album/hack-night-4.jpeg" width="600" height="400" alt=""></li>
+                                  <li><img src="imgs/hacknight-album/hack-night-5.jpeg" width="600" height="400" alt=""></li>
+                                  <li><img src="imgs/hacknight-album/hack-night-6.jpeg" width="600" height="400" alt=""></li>
+                                  <li><img src="imgs/hacknight-album/hack-night-7.jpeg" width="600" height="400" alt=""></li>
+                                  <li><img src="imgs/hacknight-album/hack-night-8.jpeg" width="600" height="400" alt=""></li>
+                                  <li><img src="imgs/hacknight-album/hack-night-9.jpeg" width="600" height="400" alt=""></li>
+                                  <li><img src="imgs/hacknight-album/hack-night-10.jpeg" width="600" height="400" alt=""></li>
+                                  <li><img src="imgs/hacknight-album/hack-night-11.jpeg" width="600" height="400" alt=""></li>
+                              </ul>
+                          </div>
+
+                          <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                          <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+                          
+                          <p class="jcarousel-pagination">
+                              
+                          </p>
+                      </div>
+                </div>
+                <div class="mobileHide">
+                  <div id="page">
+                    <div id="container">
+                      <div id="gallery" class="gallerifficContent"> 
+                        <div id="controls" class="controls"></div>
+                      <div id="loading" class="loader"></div>
+                      <div id="slideshow" class="slideshow"></div>
+                    </div>
+                    <div id="thumbs" class="navigation">
+                      <ul class="thumbs">
+                        <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4" id="hackNightGallery">
+                            <img src="imgs/hacknight-album/hack-night-2.jpeg"/>
+                        </li>
+                        <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4" id="hackNightGallery">
+                            <img src="imgs/hacknight-album/hack-night-10.jpeg"/>
+                        </li>
+                        <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4" id="hackNightGallery">
+                            <img src="imgs/hacknight-album/hack-night-5.jpeg"/>
+                        </li>
+                        <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4" id="hackNightGallery">
+                            <img src="imgs/hacknight-album/hack-night-4.jpeg"/>
+                        </li>
+                        <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4" id="hackNightGallery">
+                            <img src="imgs/hacknight-album/hack-night-3.jpeg"/>
+                        </li>
+                        <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4" id="hackNightGallery">
+                            <img src="imgs/hacknight-album/hack-night-6.jpeg"/>
+                        </li>
+                        <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4" id="hackNightGallery">
+                            <img src="imgs/hacknight-album/hack-night-7.jpeg"/>
+                        </li>
+                        <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4" id="hackNightGallery">
+                            <img src="imgs/hacknight-album/hack-night-8.jpeg"/>
+                        </li>
+                        <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4" id="hackNightGallery">
+                            <img src="imgs/hacknight-album/hack-night-9.jpeg"/>
+                        </li>
+                        <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4" id="hackNightGallery">
+                            <img src="imgs/hacknight-album/hack-night-10.jpeg"/>
+                        </li>
+                        <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4" id="hackNightGallery">
+                            <img src="imgs/hacknight-album/hack-night-11.jpeg"/>
+                        </li>
+                        <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4" id="hackNightGallery">
+                            <img src="imgs/hacknight-album/hack-night-2.jpeg"/>
+                        </li>
+                        <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4" id="hackNightGallery">
+                            <img src="imgs/hacknight-album/hack-night-11.jpeg"/>
+                        </li>
+                        <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4" id="hackNightGallery">
+                            <img src="imgs/hacknight-album/hack-night-2.jpeg"/>
+                        </li>
+                        <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4" id="hackNightGallery">
+                            <img src="imgs/hacknight-album/hack-night-10.jpeg"/>
+                        </li>
+                        <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4" id="hackNightGallery">
+                            <img src="imgs/hacknight-album/hack-night-11.jpeg"/>
+                        </li>
+                        <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4" id="hackNightGallery">
+                            <img src="imgs/hacknight-album/hack-night-3.jpeg"/>
+                        </li>
+                        <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4" id="hackNightGallery">
+                            <img src="imgs/hacknight-album/hack-night-4.jpeg"/>
+                        </li>
+                        <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4" id="hackNightGallery">
+                            <img src="imgs/hacknight-album/hack-night-6.jpeg"/>
+                        </li>
+                        <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4" id="hackNightGallery">
+                            <img src="imgs/hacknight-album/hack-night-5.jpeg"/>
+                        </li>
+                        <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4" id="hackNightGallery">
+                            <img src="imgs/hacknight-album/hack-night-10.jpeg"/>
+                        </li>
+                        <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4" id="hackNightGallery">
+                            <img src="imgs/hacknight-album/hack-night-3.jpeg"/>
+                        </li>
+                        <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4" id="hackNightGallery">
+                            <img src="imgs/hacknight-album/hack-night-2.jpeg"/>
+                        </li>
+                        <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4" id="hackNightGallery">
+                          <img src="imgs/hacknight-album/hack-night-7.jpeg"/>
+                        </li>
+                        <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4" id="hackNightGallery">
+                            <img src="imgs/hacknight-album/hack-night-8.jpeg"/>
+                        </li>
+                        <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4" id="hackNightGallery">
+                            <img src="imgs/hacknight-album/hack-night-9.jpeg"/>
+                        </li>
+                      </ul>
+                    </div>
+                    <div style="clear: both;"></div>
+                  </div>
+                </div>
+              </div>
+  
+          <div>
+              <p>&nbsp;</p>
+            </div>
+          <div>
+                <p>Kenzan Media Hack Night for developers who want to collaborate on projects with passionate peers. Bring your own project or work with someone else. Developers of all experience level are welcome. </p>
+            </div>
+            <div>
+              <p>&nbsp;</p>
+            </div>
+            <div>
+                <p>PA few developers from Kenzan Media will be there to help out as well as provide the essential needs - good attitude, a bit of experience, food and beverages.</p>
+            </div>
+            <div>
+              <p>&nbsp;</p>
+            </div>
+            <div>
+              <p>We get started around 6pm and will keep going until 9pm (or when we can't pry the eyelids open anymore).</p>
+            </div>
+
+              
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">         
+                  <div class="modal-body">                
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
+        </div>
+      </div>
+
+      <div id="contact" class="section contact">
+         <div class="content" id="test"></div>
+      </div>
+      <div id="copyright-msg">
+        <span>&copy; <span id="year">2011</span> Kenzan Media, LLC / All rights reserved</span>
+      </div>
+
+
+</body>
+</html>
+
