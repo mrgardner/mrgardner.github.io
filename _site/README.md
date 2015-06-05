@@ -1,1 +1,0 @@
-# mrgardner.github.io
