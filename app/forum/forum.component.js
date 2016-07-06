@@ -1,4 +1,4 @@
-System.register(["@angular/core"], function(exports_1, context_1) {
+System.register(["@angular/core", "@angular/router-deprecated", "./register.component"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,12 +10,18 @@ System.register(["@angular/core"], function(exports_1, context_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1;
+    var core_1, router_deprecated_1, register_component_1;
     var ForumComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (router_deprecated_1_1) {
+                router_deprecated_1 = router_deprecated_1_1;
+            },
+            function (register_component_1_1) {
+                register_component_1 = register_component_1_1;
             }],
         execute: function() {
             ForumComponent = (function () {
@@ -25,8 +31,12 @@ System.register(["@angular/core"], function(exports_1, context_1) {
                     core_1.Component({
                         selector: 'my-forum',
                         templateUrl: 'dev/forum/forum.html',
-                        styleUrls: ['assets/scss/forum.scss']
-                    }), 
+                        styleUrls: ['assets/scss/forum.scss'],
+                        directives: [router_deprecated_1.ROUTER_DIRECTIVES]
+                    }),
+                    router_deprecated_1.RouteConfig([
+                        { path: '/', name: 'Register', component: register_component_1.RegisterComponent, useAsDefault: true }
+                    ]), 
                     __metadata('design:paramtypes', [])
                 ], ForumComponent);
                 return ForumComponent;
@@ -36,4 +46,4 @@ System.register(["@angular/core"], function(exports_1, context_1) {
     }
 });
 
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZvcnVtL2ZvcnVtLmNvbXBvbmVudC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7OztZQU1BO2dCQUFBO2dCQUVBLENBQUM7Z0JBUEQ7b0JBQUMsZ0JBQVMsQ0FBQzt3QkFDUCxRQUFRLEVBQUUsVUFBVTt3QkFDcEIsV0FBVyxFQUFFLHNCQUFzQjt3QkFDbkMsU0FBUyxFQUFFLENBQUMsd0JBQXdCLENBQUM7cUJBQ3hDLENBQUM7O2tDQUFBO2dCQUdGLHFCQUFDO1lBQUQsQ0FGQSxBQUVDLElBQUE7WUFGRCwyQ0FFQyxDQUFBIiwiZmlsZSI6ImZvcnVtL2ZvcnVtLmNvbXBvbmVudC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7Q29tcG9uZW50fSBmcm9tIFwiQGFuZ3VsYXIvY29yZVwiO1xuQENvbXBvbmVudCh7XG4gICAgc2VsZWN0b3I6ICdteS1mb3J1bScsXG4gICAgdGVtcGxhdGVVcmw6ICdkZXYvZm9ydW0vZm9ydW0uaHRtbCcsXG4gICAgc3R5bGVVcmxzOiBbJ2Fzc2V0cy9zY3NzL2ZvcnVtLnNjc3MnXVxufSlcbmV4cG9ydCBjbGFzcyBGb3J1bUNvbXBvbmVudCB7XG5cbn0iXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZvcnVtL2ZvcnVtLmNvbXBvbmVudC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztZQWNBO2dCQUFBO2dCQUVBLENBQUM7Z0JBWkQ7b0JBQUMsZ0JBQVMsQ0FBQzt3QkFDUCxRQUFRLEVBQUUsVUFBVTt3QkFDcEIsV0FBVyxFQUFFLHNCQUFzQjt3QkFDbkMsU0FBUyxFQUFFLENBQUMsd0JBQXdCLENBQUM7d0JBQ3JDLFVBQVUsRUFBRSxDQUFDLHFDQUFpQixDQUFDO3FCQUNsQyxDQUFDO29CQUNELCtCQUFXLENBQUM7d0JBQ1QsRUFBQyxJQUFJLEVBQUUsR0FBRyxFQUFFLElBQUksRUFBRSxVQUFVLEVBQUUsU0FBUyxFQUFFLHNDQUFpQixFQUFFLFlBQVksRUFBRSxJQUFJLEVBQUM7cUJBRWxGLENBQUM7O2tDQUFBO2dCQUdGLHFCQUFDO1lBQUQsQ0FGQSxBQUVDLElBQUE7WUFGRCwyQ0FFQyxDQUFBIiwiZmlsZSI6ImZvcnVtL2ZvcnVtLmNvbXBvbmVudC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7Q29tcG9uZW50fSBmcm9tIFwiQGFuZ3VsYXIvY29yZVwiO1xuaW1wb3J0IHtSb3V0ZUNvbmZpZywgUk9VVEVSX0RJUkVDVElWRVN9IGZyb20gXCJAYW5ndWxhci9yb3V0ZXItZGVwcmVjYXRlZFwiO1xuaW1wb3J0IHtSZWdpc3RlckNvbXBvbmVudH0gZnJvbSBcIi4vcmVnaXN0ZXIuY29tcG9uZW50XCI7XG5cbkBDb21wb25lbnQoe1xuICAgIHNlbGVjdG9yOiAnbXktZm9ydW0nLFxuICAgIHRlbXBsYXRlVXJsOiAnZGV2L2ZvcnVtL2ZvcnVtLmh0bWwnLFxuICAgIHN0eWxlVXJsczogWydhc3NldHMvc2Nzcy9mb3J1bS5zY3NzJ10sXG4gICAgZGlyZWN0aXZlczogW1JPVVRFUl9ESVJFQ1RJVkVTXVxufSlcbkBSb3V0ZUNvbmZpZyhbXG4gICAge3BhdGg6ICcvJywgbmFtZTogJ1JlZ2lzdGVyJywgY29tcG9uZW50OiBSZWdpc3RlckNvbXBvbmVudCwgdXNlQXNEZWZhdWx0OiB0cnVlfVxuXG5dKVxuZXhwb3J0IGNsYXNzIEZvcnVtQ29tcG9uZW50IHtcblxufSJdLCJzb3VyY2VSb290IjoiL3NvdXJjZS8ifQ==

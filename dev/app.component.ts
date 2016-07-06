@@ -17,7 +17,7 @@ import {ForumComponent} from "./forum/forum.component";
 @RouteConfig([
     {path: '/about', name: 'About', component: AboutComponent},
     {path: '/music', name: 'Music', component: MusicComponent},
-    {path: '/forum', name: 'Forum', component: ForumComponent}
+    {path: '/forum/...', name: 'Forum', component: ForumComponent}
 ])
 export class AppComponent {
 

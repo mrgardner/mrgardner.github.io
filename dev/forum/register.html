@@ -1,0 +1,28 @@
+<form [ngFormModel]="registerForm" (ngSubmit)="onSubmit()">
+	<div>
+		<label for="firstName">First Name:</label>
+		<input [ngFormControl]="registerForm.controls['firstName']" type="text" id="firstName" #firstName="ngForm">
+		<span class="validation-error" *ngIf="!firstName.valid"><span class="fa fa-minus-square"></span></span>
+		<span class="validation-pass" *ngIf="firstName.valid"><span class="fa fa-check-square"></span></span>
+	</div>
+	<div>
+		<label for="lastName">Last Name:</label>
+		<input [ngFormControl]="registerForm.controls['lastName']" type="text" id="lastName" #lastName="ngForm">
+		<span class="validation-error" *ngIf="!lastName.valid"><span class="fa fa-minus-square"></span></span>
+		<span class="validation-pass" *ngIf="lastName.valid"><span class="fa fa-check-square"></span></span>
+	</div>
+	<div>
+		<label for="email">Email:</label>
+		<input [ngFormControl]="registerForm.controls['email']" type="text" id="email" #email="ngForm">
+		<span class="validation-error" *ngIf="!email.valid"><span class="fa fa-minus-square"></span></span>
+		<span class="validation-pass" *ngIf="email.valid"><span class="fa fa-check-square"></span></span>
+	</div>
+	<div>
+		<label for="password">Password:</label>
+		<input [ngFormControl]="registerForm.controls['password']" type="text" id="password" #password="ngForm">
+	</div>
+	<div>
+		<label for="confirmPassword">Confirm Password:</label>
+		<input [ngFormControl]="registerForm.controls['confirmPassword']" type="text" id="confirmPassword" #confirmPassword="ngForm">
+	</div>
+</form>
