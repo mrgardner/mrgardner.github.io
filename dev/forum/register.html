@@ -8,8 +8,8 @@
 	<div>
 		<label for="lastName">Last Name:</label>
 		<input [ngFormControl]="registerForm.controls['lastName']" type="text" id="lastName" #lastName="ngForm">
-		<span class="validation-error" *ngIf="!lastName.valid"><span class="fa fa-minus-square"></span></span>
-		<span class="validation-pass" *ngIf="lastName.valid"><span class="fa fa-check-square"></span></span>
+		<span class="fa fa-minus-square validation-error" *ngIf="!lastName.valid"></span>
+		<span class=" fa fa-check-square validation-pass" *ngIf="lastName.valid"></span>
 	</div>
 	<div>
 		<label for="email">Email:</label>
