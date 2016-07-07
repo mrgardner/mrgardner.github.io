@@ -1,28 +1,44 @@
-<form [ngFormModel]="registerForm" (ngSubmit)="onSubmit()">
-	<div>
-		<label for="firstName">First Name:</label>
-		<input [ngFormControl]="registerForm.controls['firstName']" type="text" id="firstName" #firstName="ngForm">
-		<span class="validation-error" *ngIf="!firstName.valid"><span class="fa fa-minus-square"></span></span>
-		<span class="validation-pass" *ngIf="firstName.valid"><span class="fa fa-check-square"></span></span>
-	</div>
-	<div>
-		<label for="lastName">Last Name:</label>
-		<input [ngFormControl]="registerForm.controls['lastName']" type="text" id="lastName" #lastName="ngForm">
-		<span class="fa fa-minus-square validation-error" *ngIf="!lastName.valid"></span>
-		<span class=" fa fa-check-square validation-pass" *ngIf="lastName.valid"></span>
-	</div>
-	<div>
-		<label for="email">Email:</label>
-		<input [ngFormControl]="registerForm.controls['email']" type="text" id="email" #email="ngForm">
-		<span class="validation-error" *ngIf="!email.valid"><span class="fa fa-minus-square"></span></span>
-		<span class="validation-pass" *ngIf="email.valid"><span class="fa fa-check-square"></span></span>
-	</div>
-	<div>
-		<label for="password">Password:</label>
-		<input [ngFormControl]="registerForm.controls['password']" type="text" id="password" #password="ngForm">
-	</div>
-	<div>
-		<label for="confirmPassword">Confirm Password:</label>
-		<input [ngFormControl]="registerForm.controls['confirmPassword']" type="text" id="confirmPassword" #confirmPassword="ngForm">
-	</div>
-</form>
+<div class="formContainer">
+	<h1>Please register</h1>
+	<form [ngFormModel]="registerForm" (ngSubmit)="onSubmit()">
+		<div>
+			<label for="firstName">Username:</label>
+			<input [ngFormControl]="registerForm.controls['username']" type="text" id="username" #username="ngForm">
+			<span class="fa fa-minus-square validation-error" *ngIf="!username.valid"></span>
+			<span class="fa fa-check-square validation-pass" *ngIf="username.valid"></span>
+		</div>
+		<div>
+			<label for="firstName">First Name:</label>
+			<input [ngFormControl]="registerForm.controls['firstName']" type="text" id="firstName" #firstName="ngForm">
+			<span class="fa fa-minus-square validation-error" *ngIf="!firstName.valid"></span>
+			<span class="fa fa-check-square validation-pass" *ngIf="firstName.valid"></span>
+		</div>
+		<div>
+			<label for="lastName">Last Name:</label>
+			<input [ngFormControl]="registerForm.controls['lastName']" type="text" id="lastName" #lastName="ngForm">
+			<span class="fa fa-minus-square validation-error" *ngIf="!lastName.valid"></span>
+			<span class=" fa fa-check-square validation-pass" *ngIf="lastName.valid"></span>
+		</div>
+		<div>
+			<label for="email">Email:</label>
+			<input [ngFormControl]="registerForm.controls['email']" type="text" id="email" #email="ngForm">
+			<span class="fa fa-minus-square validation-error" *ngIf="!email.valid"></span>
+			<span class="fa fa-check-square validation-pass" *ngIf="email.valid"></span>
+		</div>
+		<div>
+			<label for="password">Password:</label>
+			<input [ngFormControl]="registerForm.controls['password']" type="password" id="password" #password="ngForm">
+			<span class="fa fa-minus-square validation-error" *ngIf="!password.valid"></span>
+			<span class="fa fa-check-square validation-pass" *ngIf="password.valid"></span>
+		</div>
+		<div>
+			<label for="confirmPassword">Confirm Password:</label>
+			<input [ngFormControl]="registerForm.controls['confirmPassword']" type="password" id="confirmPassword" #confirmPassword="ngForm">
+			<span class="fa fa-minus-square validation-error" *ngIf="registerForm.hasError('mismatchedPasswords')"></span>
+			<span class="fa fa-check-square validation-pass" *ngIf="!registerForm.hasError('mismatchedPasswords')"></span>
+		</div>
+		<button (click)="createUser(firstName.value, lastName.value, email.value, password.value, username.value)" [disabled]="!registerForm.valid" type="submit">Submit</button>
+		<button (click)="getUser(username.value)">Get Data</button>
+		<p>Response: {{response}}</p>
+	</form>
+</div>
