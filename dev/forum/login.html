@@ -1,0 +1,21 @@
+<div class="formContainer">
+	<h1>Please register</h1>
+	<form [ngFormModel]="loginForm" (ngSubmit)="onSubmit()">
+		<div>
+			<label for="username">Username:</label>
+			<input [ngFormControl]="loginForm.controls['username']" type="text" id="username" #username="ngForm">
+			<span class="fa fa-minus-square validation-error" *ngIf="!username.valid"></span>
+			<span class="fa fa-check-square validation-pass" *ngIf="username.valid"></span>
+		</div>
+		<div>
+			<label for="password">Password:</label>
+			<input [ngFormControl]="loginForm.controls['password']" type="password" id="password" #password="ngForm">
+			<span class="fa fa-minus-square validation-error" *ngIf="!password.valid"></span>
+			<span class="fa fa-check-square validation-pass" *ngIf="password.valid"></span>
+		</div>
+		<button (click)="getAuth(username.value,password.value)" [disabled]="!loginForm.valid" type="submit">Login</button>
+		<p>Response: {{response}}</p>
+	</form>
+</div>
+
+<button><a [routerLink]="['Register']">Register</a></button>

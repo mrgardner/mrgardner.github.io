@@ -2,6 +2,7 @@
 
     // map tells the System loader where to look for things
     var map = {
+        'angular2-spotify': 'node_modules/angular2-spotify',
         'app':                        'app', // 'dist',
         'rxjs':                       'node_modules/rxjs',
         '@angular':                   'node_modules/@angular'
@@ -9,6 +10,8 @@
 
     // packages tells the System loader how to load when no filename and/or no extension
     var packages = {
+        'angular2-spotify':           { defaultExtension: 'js' },
+        '@angular':                   { defaultExtension: 'js' },
         'app':                        { main: 'boot.js',  defaultExtension: 'js' },
         'rxjs':                       { defaultExtension: 'js' },
     };
@@ -26,7 +29,7 @@
         '@angular/upgrade'
     ];
 
-    // add package entries for angular packages in the form '@angular/common': { main: 'index.js', defaultExtension: 'js' }
+    // add package entries for angular packages in the forum '@angular/common': { main: 'index.js', defaultExtension: 'js' }
     packageNames.forEach(function(pkgName) {
         packages[pkgName] = { main: 'index.js', defaultExtension: 'js' };
     });
@@ -40,5 +43,6 @@
     if (global.filterSystemConfig) { global.filterSystemConfig(config); }
 
     System.config(config);
+
 
 })(this);
