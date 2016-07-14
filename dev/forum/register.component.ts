@@ -26,8 +26,14 @@ export class RegisterComponent implements OnInit{
                 Validators.required,
                 validateEmail
             ])],
-            'password': ['', Validators.required],
-            'confirmPassword': ['', Validators.required],
+            'password': ['', Validators.compose([
+                Validators.required,
+                validateTextLength
+            ])],
+            'confirmPassword': ['', Validators.compose([
+                Validators.required,
+                validateTextLength
+            ])],
             'username': ['', Validators.required],
         }, {validator: validatePassword('password', 'confirmPassword')}
         );
@@ -67,4 +73,12 @@ function validatePassword(passwordKey: string, confirmPasswordKey: string) {
             };
         }
     }
+}
+
+function validateTextLength (control: Control): {[s: string]: boolean} {
+    if (control.value.length < 6 || control.value.length === 0) {
+        console.log('BINGO');
+        return {invalidLength: true};
+    }
+    console.log(control.value.length);
 }

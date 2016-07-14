@@ -5,4 +5,8 @@ import {ROUTER_PROVIDERS} from "@angular/router-deprecated";
 import {HTTP_PROVIDERS} from "@angular/http";
 
 
-bootstrap(AppComponent, [ROUTER_PROVIDERS, HTTP_PROVIDERS]);
+
+bootstrap(AppComponent, [
+    ROUTER_PROVIDERS,
+    HTTP_PROVIDERS
+]);
